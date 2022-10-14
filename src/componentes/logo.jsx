@@ -8,7 +8,7 @@ const Logo = ({ sizes }) => {
         sports_esports
       </span>
 
-      <p className={('ml-0.5 text-slate-700 font-medium ' + sizes.textSize).trim()}>
+      <p className={('ml-0.5 font-medium ' + sizes.textSize).trim()}>
         <em className='not-italic text-blue-600'>Alura</em>
         Geek
       </p>
