@@ -22,8 +22,6 @@ function App() {
     
     <div className="App text-slate-700">
       <Header accionLupa={ controlShowFormSearch } showFormSearch={ showFormSearch }/>
-      <div className='w-full h-[200px] bg-orange-500'></div>
-      <div className='w-full h-[200px] bg-lime-600'></div>
       <Overlay visible={ showFormSearch } accionOverlay={ controlShowFormSearch } />
     </div>
   );
