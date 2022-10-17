@@ -2,6 +2,7 @@ import './App.css';
 import Header from './componentes/header/header-component';
 import Overlay from './componentes/overlay';
 import { useState, useEffect } from 'react';
+import FooterComponent from './componentes/footer/footer-component';
 
 function App() {
   const [showFormSearch, setShowFormSearch] = useState(false);
@@ -23,6 +24,7 @@ function App() {
     <div className="App text-slate-700">
       <Header accionLupa={ controlShowFormSearch } showFormSearch={ showFormSearch }/>
       <Overlay visible={ showFormSearch } accionOverlay={ controlShowFormSearch } />
+      <FooterComponent />
     </div>
   );
 }
