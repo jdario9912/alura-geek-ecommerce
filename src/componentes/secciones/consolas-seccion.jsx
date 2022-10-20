@@ -1,10 +1,11 @@
 import React from 'react';
+import EncabezadoSeccion from '../encabezado-seccion';
 
 const ConsolasSeccion = () => {
   return (
-    <div>
-      Consolas Seccion
-    </div>
+    <section className='p-4'>
+      <EncabezadoSeccion titulo='Consolas' />      
+    </section>
   );
 }
 

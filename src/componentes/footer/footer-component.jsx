@@ -34,8 +34,8 @@ const FooterComponent = () => {
           <button type="submit" className='py-2 px-6 bg-blue-600 mt-2 text-[#FFFFFF]'>Enviar Mensaje</button>
         </form>
       </div>
-      <div className='bg-[#FFFFFF] w-screen'>
-        <p className='text-center'>Desarrolado por Joel</p>
+      <div className='bg-[#FFFFFF] w-screen p-2'>
+        <p className='text-center'>&#169; copyright Joel</p>
         <p className='text-center'>2022</p>
       </div>
     </footer>
