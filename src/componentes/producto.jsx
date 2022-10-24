@@ -2,7 +2,8 @@ import React from 'react';
 import Vinculo from './vinculo';
 import { VinculoModel } from '../modelos/vinculo-model';
 
-const Producto = ({ nombre, precio, vinculoVerMas, url }) => {
+const Producto = ({ nombre, precio, vinculoVerMas }) => {
+  const url = "../img/epRFE_hBNjo.png";
   const vinculoEstilos = 'text-blue-600 font-semibold';
   return (
     <div className='w-[47%]'>
