@@ -1,31 +1,34 @@
 import React from 'react';
 
 const EditarProducto = () => {
+  const estilosLabel = 'border-b-2 flex flex-col p-2';
   return (
-    <div>
-      <form action="" className='border border-amber-500'>
-        
-        <label htmlFor="">
-          Id:
-          <input type="num" disabled='true' id='id' />
-        </label>
+    <div className='w-full h-screen flex justify-center items-center'>
+      <form action="" className='flex flex-col gap-4'>
 
-        <label htmlFor="nombre">
+        <label htmlFor="imagen" className={ estilosLabel }>
+          Imagen:
+          <input type="file" id='imagen' />
+        </label>
+        
+        <input type="num" disabled='true' id='id' value={4} hidden='true' />
+
+        <label htmlFor="nombre" className={ estilosLabel }>
           Nombre:
           <input type="text" id='nombre' />
         </label>
 
-        <label htmlFor="precio">
+        <label htmlFor="precio" className={ estilosLabel }>
           Precio:
           <input type="num" id='precio' />
         </label>
 
-        <label htmlFor="descripcion">
+        <label htmlFor="descripcion" className={ estilosLabel }>
           Descripción:
-          <textarea id='descripcion'></textarea>
+          <textarea id='descripcion' />
         </label>
 
-        <label htmlFor="seccion">
+        <label htmlFor="seccion" className={ estilosLabel }>
           Sección:
           <select id='seccion'>
             <option selected value="star wars">Star Wars</option>
@@ -34,15 +37,17 @@ const EditarProducto = () => {
           </select>
         </label>
 
-        <label htmlFor="imagen">
-          Imagen:
-          <input type="file" id='imagen' />
+        <label htmlFor="fecha" className={ estilosLabel }>
+          Fecha:
+          <input type="text" id='fecha' disabled={ true } value='21-10-22' />
         </label>
 
-        <label htmlFor="fecha">
-          Fecha:
-          <input type="text" id='fecha' />
-        </label>
+        <button 
+          type="submit"
+          className='bg-blue-600 text-slate-300 p-2'
+        >
+          Actualizar producto
+        </button>
       </form>
     </div>
   );
