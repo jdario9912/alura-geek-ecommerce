@@ -4,6 +4,7 @@ import Overlay from './componentes/overlay';
 import { useState, useEffect } from 'react';
 import FooterComponent from './componentes/footer/footer-component';
 import Home from './paginas/home';
+import AgregarProducto from './paginas/agregar-producto';
 
 function App() {
   const [showFormSearch, setShowFormSearch] = useState(false);
@@ -24,6 +25,7 @@ function App() {
     <div className="App text-slate-700">
       <Header accionLupa={ controlShowFormSearch } showFormSearch={ showFormSearch }/>
       <Home />
+      <AgregarProducto />
       <Overlay visible={ showFormSearch } accionOverlay={ controlShowFormSearch } />
       <FooterComponent />
     </div>

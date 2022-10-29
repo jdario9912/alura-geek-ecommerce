@@ -44,7 +44,7 @@ const EditarProducto = () => {
 
         <button 
           type="submit"
-          className='bg-blue-600 text-slate-300 p-2'
+          className='bg-blue-600 text-slate-200 p-2'
         >
           Actualizar producto
         </button>
