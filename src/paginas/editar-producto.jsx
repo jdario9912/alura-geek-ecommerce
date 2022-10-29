@@ -1,9 +1,11 @@
 import React from 'react';
+import TituloPagina from '../componentes/titulo-pagina';
 
 const EditarProducto = () => {
   const estilosLabel = 'border-b-2 flex flex-col p-2';
   return (
-    <div className='w-full h-screen flex justify-center items-center'>
+    <div className='w-full h-screen flex flex-col justify-center items-center'>
+      <TituloPagina texto='Editar producto' />
       <form action="" className='flex flex-col gap-4'>
 
         <label htmlFor="imagen" className={ estilosLabel }>
