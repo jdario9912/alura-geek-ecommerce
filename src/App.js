@@ -3,7 +3,7 @@ import Header from './componentes/header/header-component';
 import Overlay from './componentes/overlay';
 import { useState, useEffect } from 'react';
 import FooterComponent from './componentes/footer/footer-component';
-import Home from './paginas/home';
+// import Home from './paginas/home';
 
 function App() {
   const [showFormSearch, setShowFormSearch] = useState(false);
@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App text-slate-700">
       <Header accionLupa={ controlShowFormSearch } showFormSearch={ showFormSearch }/>
-      <Home />
+      {/* <Home /> */}
       <Overlay visible={ showFormSearch } accionOverlay={ controlShowFormSearch } />
       <FooterComponent />
     </div>
