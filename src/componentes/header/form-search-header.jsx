@@ -13,7 +13,7 @@ const FormSearchHeader = ({ visible }) => {
         name="search" 
         id="search" 
         placeholder=' ¿Que deseas buscar?' 
-        className='w-full rounded-xl md:rounded-sm md:bg-inherit md:focus:bg-[#FFFFFF]'
+        className='w-full pl-1 rounded-r-xl md:rounded-sm md:bg-inherit md:focus:bg-[#FFFFFF]'
       />
       <button type="submit" className='text-2xl'><BiSearchAlt2/></button>
     </form>
