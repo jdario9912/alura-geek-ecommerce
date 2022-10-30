@@ -3,6 +3,7 @@ import Header from './componentes/header/header-component';
 import Overlay from './componentes/overlay';
 import { useState, useEffect } from 'react';
 import FooterComponent from './componentes/footer/footer-component';
+import ProductosTodos from './paginas/productos-todos';
 // import Home from './paginas/home';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <div className="App text-slate-700">
       <Header accionLupa={ controlShowFormSearch } showFormSearch={ showFormSearch }/>
       {/* <Home /> */}
+      <ProductosTodos />
       <Overlay visible={ showFormSearch } accionOverlay={ controlShowFormSearch } />
       <FooterComponent />
     </div>
