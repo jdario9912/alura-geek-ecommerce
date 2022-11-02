@@ -4,13 +4,13 @@ import Producto from '../producto';
 
 
 const StarWarsSeccion = () => {
-  const [consolas, setConsolas] = useState([]);
+  const [personajes, setPersonajes] = useState([]);
 
   useEffect(() => {
-    fetch('https://db-alura-geek-ecommerce.herokuapp.com/consolas')
+    fetch('https://db-alura-geek-ecommerce.herokuapp.com/starWars')
       .then(response => response.json())
-      .then(consolasResponse => {
-        setConsolas(consolasResponse);
+      .then(personajesResponse => {
+        setPersonajes(personajesResponse);
       }) 
   }, []);
 
@@ -18,8 +18,8 @@ const StarWarsSeccion = () => {
     <section className='p-4'>
       <EncabezadoSeccion titulo='StarWars' />
       {
-        consolas.map((consola) => 
-          <Producto nombre={consola.nombre} precio={consola.precio} key={consola.id} vinculoVerMas={'#'} />
+        personajes.map((personaje) => 
+          <Producto nombre={personaje.nombre} precio={personaje.precio} key={personaje.id} vinculoVerMas={'#'} url={personaje.imgBase64} />
         )
       }
     </section>
