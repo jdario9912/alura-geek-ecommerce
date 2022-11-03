@@ -7,8 +7,10 @@ const capturarImagen = (files) => {
   tagImg.src = files.base64;
 }
 
+
+
 const registrarProducto = (imgBase64, nombre, precio, descripcion, seccion, fecha) => {
-  return fetch(`https://db-alura-geek-ecommerce.herokuapp.com/${seccion}`, {
+  return fetch(`http://localhost:3000/${seccion}`, {
       method: 'POST',
       headers: {
           "Content-Type": "application/json"
@@ -28,18 +30,25 @@ const catchInfoProductoNuevo = (e) => {
   e.preventDefault();
 
   const imgBase64 = document.querySelector('[data-img]').src;
-  const nombre = document.querySelector('[data-nombre]').value;
-  const precio = document.querySelector('[data-precio]').value;
+  const nombre = document.querySelector('[data="nombre"]').value;
+  const precio = document.querySelector('[data="precio"]').value;
   const descripcion = document.querySelector('[data-descripcion]').value;
   const seccion = document.querySelector('[data-seccion]').value;
   const fecha = moment().format('L');
   
-  registrarProducto(imgBase64, nombre, precio, descripcion, seccion, fecha)
+  registrarProducto(imgBase64, nombre, precio, descripcion, seccion, fecha);
   
-  imgBase64 = null;
-  nombre = '';
-  precio = '';
-  descripcion = '';
+  const cleanimgBase64 = document.querySelector('[data-img]'),
+        cleannombre = document.querySelector('[data="nombre"]'),
+        cleanprecio = document.querySelector('[data="precio"]'),
+        cleandescripcion = document.querySelector('[data-descripcion]'),
+        cleanseccion = document.querySelector('[data-seccion]');
+
+  cleanimgBase64.src = null;
+  cleannombre.value = '';
+  cleanprecio.value = '';
+  cleandescripcion.value = '';
+  cleanseccion.value = '';
 };
 
 // Esta funcion se utilizo para borrar ocacionalmente algun usuario registrado
