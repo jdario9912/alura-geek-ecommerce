@@ -7,7 +7,7 @@ const StarWarsSeccion = () => {
   const [personajes, setPersonajes] = useState([]);
 
   useEffect(() => {
-    fetch('https://db-alura-geek-ecommerce.herokuapp.com/starWars')
+    fetch('http://localhost:3000/starWars')
       .then(response => response.json())
       .then(personajesResponse => {
         setPersonajes(personajesResponse);
@@ -19,7 +19,13 @@ const StarWarsSeccion = () => {
       <EncabezadoSeccion titulo='StarWars' />
       {
         personajes.map((personaje) => 
-          <Producto nombre={personaje.nombre} precio={personaje.precio} key={personaje.id} vinculoVerMas={'#'} url={personaje.imgBase64} />
+          <Producto 
+            nombre={personaje.nombre} 
+            precio={personaje.precio} 
+            key={personaje.id} 
+            vinculoVerMas={'#'} 
+            url={personaje.imgBase64} 
+          />
         )
       }
     </section>
