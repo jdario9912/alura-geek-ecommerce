@@ -20,7 +20,8 @@ const registrarProducto = (imgBase64, nombre, precio, descripcion, seccion, fech
         imgBase64, 
         nombre, 
         precio, 
-        descripcion, 
+        descripcion,
+        seccion,
         fecha
       })
   });

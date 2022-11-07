@@ -9,6 +9,9 @@ import Login from './paginas/login';
 import ProductosTodos from './paginas/productos-todos';
 import Error404 from './paginas/error404';
 import AgregarProducto from './paginas/agregar-producto';
+import EditarProducto from './paginas/editar-producto';
+import EliminarProducto from './paginas/eliminar-producto';
+import ProductoDescripcion from './paginas/producto-descripcion';
 
 function App() {
   const [showFormSearch, setShowFormSearch] = useState(false);
@@ -35,6 +38,11 @@ function App() {
           <Route path="/login" element={ <Login /> } />
           <Route path="/productos-todos" element={ <ProductosTodos /> } />
           <Route path="/agregar-producto" element={ <AgregarProducto /> } />
+          <Route path="/producto-descripcion/starWars/*" element={ <ProductoDescripcion /> } />
+          <Route path="/producto-descripcion/consolas/*" element={ <ProductoDescripcion /> } />
+          <Route path="/producto-descripcion/diversos/*" element={ <ProductoDescripcion /> } />
+          <Route path="/editar-producto" element={ <EditarProducto />} />
+          <Route path="/eliminar-producto" element={ <EliminarProducto />} />
         </Routes>
       </div>
       <Overlay visible={ showFormSearch } accionOverlay={ controlShowFormSearch } />
