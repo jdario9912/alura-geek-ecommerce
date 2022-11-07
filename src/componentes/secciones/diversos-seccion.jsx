@@ -3,7 +3,7 @@ import EncabezadoSeccion from '../encabezado-seccion';
 import Producto from '../producto';
 
 
-const Diversos = () => {
+const DiversosSeccion = () => {
   const [diversos, setDiversos] = useState([]);
 
   useEffect(() => {
@@ -32,4 +32,4 @@ const Diversos = () => {
   );
 }
 
-export default Diversos;
+export default DiversosSeccion;
