@@ -1,20 +1,23 @@
-import React from 'react';
-import Producto from '../componentes/producto';
+import React, {useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 import ProductoSeleccionado from '../componentes/producto-seleccionado';
 
 const ProductoDescripcion = () => {
+  const {id, seccion} = useParams();
+  const [prodSeleccionado, setProdSeleccionado] = useState({})
+  useEffect(() => {
+    fetch(`http://localhost:3000/${seccion}/${id}`)
+      .then(res => res.json())
+      .then(producto => setProdSeleccionado(producto))
+  }, []);
   return (
     <div>
       <ProductoSeleccionado 
-        src={'src de la imagen'} 
-        nombre={'nombre'} 
-        precio={500} 
-        descripcion={'Aca va una descripcion del producto. Debe ser lo mas efectiva posible para que nos genere mucho dinero'} 
+        src={prodSeleccionado.imgBase64} 
+        nombre={prodSeleccionado.nombre} 
+        precio={prodSeleccionado.precio} 
+        descripcion={prodSeleccionado.descripcion} 
       />
-      <div className='p-4'>
-        <h3 className='text-xl font-medium mb-4'>Productos similares</h3>
-        <Producto nombre={'tazon'} precio={35627} vinculoVerMas={'#'}/>
-      </div>
     </div>
   );
 }

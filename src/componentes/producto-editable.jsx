@@ -16,7 +16,7 @@ const ProductoEditable = ({ imgBase64, nombre, precio, seccion, id }) => {
       </div>
       <p className='mt-2'>{ nombre }</p>
       <p className='font-semibold'>${ precio }</p>
-      <Vinculo props={ new VinculoModel('Ver producto', `/producto-descripcion/${seccion}/${id}`, vinculoEstilos)} />
+      <Vinculo props={ new VinculoModel('Ver producto', `/producto-descripcion/${seccion}/${id}/${seccion}`, vinculoEstilos)} />
     </div>
   );
 }

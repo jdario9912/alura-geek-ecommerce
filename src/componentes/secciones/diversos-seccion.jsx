@@ -17,17 +17,19 @@ const DiversosSeccion = () => {
   return (
     <section className='p-4'>
       <EncabezadoSeccion titulo='Diversos' />
-      {
-        diversos.map((diverso) => 
-          <Producto 
-            nombre={diverso.nombre} 
-            precio={diverso.precio} 
-            key={diverso.id} 
-            vinculoVerMas={'#'} 
-            url={diverso.imgBase64} 
-          />
-        )
-      }
+      <div className='flex flex-wrap gap-2'>
+        {
+          diversos.map((diverso) => 
+            <Producto 
+              nombre={diverso.nombre} 
+              precio={diverso.precio} 
+              key={diverso.id} 
+              vinculoVerMas={'#'} 
+              url={diverso.imgBase64} 
+            />
+          )
+        }
+      </div>
     </section>
   );
 }

@@ -38,9 +38,9 @@ function App() {
           <Route path="/login" element={ <Login /> } />
           <Route path="/productos-todos" element={ <ProductosTodos /> } />
           <Route path="/agregar-producto" element={ <AgregarProducto /> } />
-          <Route path="/producto-descripcion/starWars/*" element={ <ProductoDescripcion /> } />
-          <Route path="/producto-descripcion/consolas/*" element={ <ProductoDescripcion /> } />
-          <Route path="/producto-descripcion/diversos/*" element={ <ProductoDescripcion /> } />
+          <Route path="/producto-descripcion/starWars/:id/:seccion" element={ <ProductoDescripcion /> } />
+          <Route path="/producto-descripcion/consolas/:id/:seccion" element={ <ProductoDescripcion /> } />
+          <Route path="/producto-descripcion/diversos/:id/:seccion" element={ <ProductoDescripcion /> } />
           <Route path="/editar-producto" element={ <EditarProducto />} />
           <Route path="/eliminar-producto" element={ <EliminarProducto />} />
         </Routes>

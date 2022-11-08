@@ -17,17 +17,19 @@ const ConsolasSeccion = () => {
   return (
     <section className='p-4'>
       <EncabezadoSeccion titulo='Consolas' />
-      {
-        consolas.map((personaje) => 
-          <Producto 
-            nombre={personaje.nombre} 
-            precio={personaje.precio} 
-            key={personaje.id} 
-            vinculoVerMas={'#'} 
-            url={personaje.imgBase64} 
-          />
-        )
-      }
+      <div className='flex flex-wrap gap-2'>
+        {
+          consolas.map((personaje) => 
+            <Producto 
+              nombre={personaje.nombre} 
+              precio={personaje.precio} 
+              key={personaje.id} 
+              vinculoVerMas={'#'} 
+              url={personaje.imgBase64} 
+            />
+          )
+        }
+      </div>
     </section>
   );
 }
