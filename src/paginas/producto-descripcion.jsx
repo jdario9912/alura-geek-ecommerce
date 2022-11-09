@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import ProductoSeleccionado from '../componentes/producto-seleccionado';
+import ProductosSimilares from '../componentes/productos-similares';
 
 const ProductoDescripcion = () => {
   const {id, seccion} = useParams();
@@ -17,7 +18,9 @@ const ProductoDescripcion = () => {
         nombre={prodSeleccionado.nombre} 
         precio={prodSeleccionado.precio} 
         descripcion={prodSeleccionado.descripcion} 
+        
       />
+      <ProductosSimilares />
     </div>
   );
 }

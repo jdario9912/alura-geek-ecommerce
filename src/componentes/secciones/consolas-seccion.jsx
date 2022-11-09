@@ -19,13 +19,13 @@ const ConsolasSeccion = () => {
       <EncabezadoSeccion titulo='Consolas' />
       <div className='flex flex-wrap gap-2'>
         {
-          consolas.map((personaje) => 
+          consolas.map((consola) => 
             <Producto 
-              nombre={personaje.nombre} 
-              precio={personaje.precio} 
-              key={personaje.id} 
-              vinculoVerMas={'#'} 
-              url={personaje.imgBase64} 
+              nombre={consola.nombre} 
+              precio={consola.precio} 
+              key={consola.id} 
+              vinculoVerMas={`/producto-descripcion/${consola.seccion}/${consola.id}/${consola.seccion}`} 
+              url={consola.imgBase64} 
             />
           )
         }

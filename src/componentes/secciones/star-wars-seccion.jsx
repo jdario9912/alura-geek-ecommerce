@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import EncabezadoSeccion from '../encabezado-seccion';
 import Producto from '../producto';
 
@@ -24,7 +25,7 @@ const StarWarsSeccion = () => {
               nombre={personaje.nombre} 
               precio={personaje.precio} 
               key={personaje.id} 
-              vinculoVerMas={'#'} 
+              vinculoVerMas={`/producto-descripcion/${personaje.seccion}/${personaje.id}/${personaje.seccion}`} 
               url={personaje.imgBase64} 
             />
           )
