@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductosPorSeccion from '../componentes/productos-por-seccion';
+import ProductosTodasSecciones from '../componentes/productos-todas-secciones';
 import Vinculo from '../componentes/vinculo';
 import { VinculoModel } from '../modelos/vinculo-model';
 
@@ -11,9 +11,7 @@ const ProductosTodos = () => {
         <h3 className='text-xl font-medium mb-4'>Todos los productos</h3>
         <Vinculo props={ new VinculoModel('Agregar producto', '/agregar-producto', vinculoEstilos)} />
       </div>
-      <ProductosPorSeccion seccion='starWars' />
-      <ProductosPorSeccion seccion='consolas' />
-      <ProductosPorSeccion seccion='diversos' />
+      <ProductosTodasSecciones />
     </div>
   );
 }

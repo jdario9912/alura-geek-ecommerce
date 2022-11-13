@@ -18,7 +18,6 @@ const ProductoDescripcion = () => {
         nombre={prodSeleccionado.nombre} 
         precio={prodSeleccionado.precio} 
         descripcion={prodSeleccionado.descripcion} 
-        
       />
       <ProductosSimilares />
     </div>

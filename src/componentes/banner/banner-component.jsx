@@ -8,7 +8,7 @@ const BannerComponent = () => {
     <section className="bg-[url('./img/banner.png')] bg-center bg-cover bg-no-repeat h-48 text-[#ffffff] p-4 flex flex-col justify-end items-start gap-2">
       <p className='text-xl font-medium'>Febrero promocional</p>
       <p className='text-sm'>Productos seleccionados con 33% de descuento</p>
-      <Vinculo props={ new VinculoModel('Ver consolas', '/consolas', estilos)}/>
+      <Vinculo props={ new VinculoModel('Ver consolas', '/#consolas', estilos)}/>
     </section>
   );
 }

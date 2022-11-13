@@ -41,8 +41,8 @@ function App() {
           <Route path="/producto-descripcion/starWars/:id/:seccion" element={ <ProductoDescripcion /> } />
           <Route path="/producto-descripcion/consolas/:id/:seccion" element={ <ProductoDescripcion /> } />
           <Route path="/producto-descripcion/diversos/:id/:seccion" element={ <ProductoDescripcion /> } />
-          <Route path="/editar-producto" element={ <EditarProducto />} />
-          <Route path="/eliminar-producto" element={ <EliminarProducto />} />
+          <Route path="/editar-producto/:seccion/:id" element={ <EditarProducto />} />
+          <Route path="/eliminar-producto/:seccion/:id" element={ <EliminarProducto />} />
         </Routes>
       </div>
       <Overlay visible={ showFormSearch } accionOverlay={ controlShowFormSearch } />
