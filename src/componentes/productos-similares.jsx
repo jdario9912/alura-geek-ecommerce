@@ -13,19 +13,24 @@ const ProductosSimilares = () => {
       .catch(e => console.log(e))
   }, []);
   return (
-    <div className='flex flex-wrap p-4 gap-2'>
-      {
-        similares.map(prodSimilar =>
-          (prodSimilar.id != id) ?
-          <Producto 
-            nombre={prodSimilar.nombre}  
-            precio={prodSimilar.precio}
-            url={prodSimilar.imgBase64}
-            vinculoVerMas={`/producto-descripcion/${prodSimilar.seccion}/${prodSimilar.id}/${prodSimilar.seccion}`}
-          /> :
-          ''
-        )
-      }
+    <div className='p-4'>
+      <h3 className='capitalize text-2xl mb-4'>productos similares</h3>
+      <div>
+      <div className='flex flex-wrap gap-2'>
+        {
+          similares.map(prodSimilar =>
+            (prodSimilar.id != id) ?
+            <Producto 
+              nombre={prodSimilar.nombre}  
+              precio={prodSimilar.precio}
+              url={prodSimilar.imgBase64}
+              vinculoVerMas={`/producto-descripcion/${prodSimilar.seccion}/${prodSimilar.id}/${prodSimilar.seccion}`}
+            /> :
+            ''
+          )
+        }
+    </div>
+      </div>
     </div>
   );
 }

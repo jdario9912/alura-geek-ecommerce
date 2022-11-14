@@ -13,6 +13,7 @@ import EditarProducto from './paginas/editar-producto';
 import EliminarProducto from './paginas/eliminar-producto';
 import ProductoDescripcion from './paginas/producto-descripcion';
 import ConfirmaProductoAgregado from './paginas/confirma-producto-agregado';
+import ProductosPorSeccion from './paginas/productos-por-seccion';
 
 function App() {
   const [showFormSearch, setShowFormSearch] = useState(false);
@@ -45,6 +46,7 @@ function App() {
           <Route path="/editar-producto/:seccion/:id" element={ <EditarProducto />} />
           <Route path="/eliminar-producto/:seccion/:id" element={ <EliminarProducto />} />
           <Route path="/confirma-producto-agregado" element={ <ConfirmaProductoAgregado />} />
+          <Route path="/producto-por-seccion/:seccion" element={ <ProductosPorSeccion />} />
         </Routes>
       </div>
       <Overlay visible={ showFormSearch } accionOverlay={ controlShowFormSearch } />
