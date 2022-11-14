@@ -11,11 +11,14 @@ const EliminarProducto = () => {
       .catch(e => console.log(e))
   }, []);
 
+  // ME FALTA IR A LA PAGINA DE TODOS LOS PRODUCTOS UNA VEZ QUE SE ELIMINA UN PRODUCTO
+
   const confirmaEliminarProducto = () => {
     return fetch(`http://localhost:3000/${seccion}/${id}`, {
         method: 'DELETE',
     })
-    .then(console.log(`Producto ${articulo.nombre} eliminado`));
+    .then(window.location.href = 'http://localhost:3001/productos-todos')
+    .catch(alert('Ocurrio un error inesperado. No se pudo eliminar'));
   }
 
   return (

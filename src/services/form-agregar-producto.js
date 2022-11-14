@@ -24,7 +24,8 @@ const registrarProducto = (imgBase64, nombre, precio, descripcion, seccion, fech
         seccion,
         fecha
       })
-  });
+  })
+  .then(window.location.href = '/confirma-producto-agregado');
 };
 
 const catchInfoProductoNuevo = (e) => {

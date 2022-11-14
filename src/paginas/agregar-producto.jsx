@@ -8,15 +8,6 @@ const AgregarProducto = () => {
     <div className='p-4'>
       <TituloPagina texto='Agregar un producto nuevo' />
       <Formulario />
-
-        {/* <button 
-          type="submit"
-          className='bg-red-600 text-slate-200 p-2'
-          onClick={ formProductoNuevo.eliminarProducto('0') }
-        >
-          Auxiliar
-        </button> */}
-      
     </div>
   );
 }
