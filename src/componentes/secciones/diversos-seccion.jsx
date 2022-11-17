@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { urlApi } from '../../config-api/config-api';
 import EncabezadoSeccion from '../encabezado-seccion';
 import Producto from '../producto';
 
 
 const DiversosSeccion = () => {
   const [diversos, setDiversos] = useState([]);
+  const seccion = 'diversos';
 
   useEffect(() => {
-    fetch('http://localhost:3000/diversos')
+    fetch(urlApi + seccion)
       .then(response => response.json())
       .then(diversosResponse => {
         setDiversos(diversosResponse);

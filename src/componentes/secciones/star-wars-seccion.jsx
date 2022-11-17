@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { urlApi } from '../../config-api/config-api';
 import EncabezadoSeccion from '../encabezado-seccion';
 import Producto from '../producto';
 
 
 const StarWarsSeccion = () => {
   const [personajes, setPersonajes] = useState([]);
+  const seccion = 'starWars';
 
   useEffect(() => {
-    fetch('http://localhost:3000/starWars')
+    fetch(urlApi + seccion)
       .then(response => response.json())
       .then(personajesResponse => {
         setPersonajes(personajesResponse);
