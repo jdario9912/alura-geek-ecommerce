@@ -12,6 +12,7 @@ const ConfirmaProductoAgregado = () => {
       </div>
       <p>Producto agregado exitosamente!</p>
       <Vinculo props={new VinculoModel('Ok', '/productos-todos', estilosVinculo)} />
+      <Vinculo props={new VinculoModel('Agregar otro', '/agregar-producto', estilosVinculo)} />
     </div>
   );
 }

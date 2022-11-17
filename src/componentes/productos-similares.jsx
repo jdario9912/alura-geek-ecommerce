@@ -19,12 +19,12 @@ const ProductosSimilares = () => {
       <div className='flex flex-wrap gap-2'>
         {
           similares.map(prodSimilar =>
-            (prodSimilar.id != id) ?
+            (prodSimilar.id !== id) ?
             <Producto 
               nombre={prodSimilar.nombre}  
               precio={prodSimilar.precio}
               url={prodSimilar.imgBase64}
-              vinculoVerMas={`/producto-descripcion/${prodSimilar.seccion}/${prodSimilar.id}/${prodSimilar.seccion}`}
+              vinculoVerMas={`/producto-descripcion/${prodSimilar.seccion}/${prodSimilar.id}`}
             /> :
             ''
           )

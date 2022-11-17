@@ -17,7 +17,7 @@ const ProductoDescripcion = () => {
         src={prodSeleccionado.imgBase64} 
         nombre={prodSeleccionado.nombre} 
         precio={prodSeleccionado.precio} 
-        descripcion={prodSeleccionado.descripcion} 
+        descripcion={prodSeleccionado.descripcion}
       />
       <ProductosSimilares />
     </div>

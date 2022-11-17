@@ -1,6 +1,6 @@
 import React from 'react';
 import TituloPagina from '../componentes/titulo-pagina';
-import Formulario from '../componentes/form-agregar-prducto/formulario';
+import Formulario from '../componentes/form-agregar-producto/formulario';
 
 
 const AgregarProducto = () => {

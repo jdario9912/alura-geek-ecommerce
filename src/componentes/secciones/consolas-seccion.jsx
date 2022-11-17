@@ -24,7 +24,7 @@ const ConsolasSeccion = () => {
               nombre={consola.nombre} 
               precio={consola.precio} 
               key={consola.id} 
-              vinculoVerMas={`/producto-descripcion/${consola.seccion}/${consola.id}/${consola.seccion}`} 
+              vinculoVerMas={`/producto-descripcion/${consola.seccion}/${consola.id}`} 
               url={consola.imgBase64} 
             />
           )

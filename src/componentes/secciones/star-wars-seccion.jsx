@@ -25,7 +25,7 @@ const StarWarsSeccion = () => {
               nombre={personaje.nombre} 
               precio={personaje.precio} 
               key={personaje.id} 
-              vinculoVerMas={`/producto-descripcion/${personaje.seccion}/${personaje.id}/${personaje.seccion}`} 
+              vinculoVerMas={`/producto-descripcion/${personaje.seccion}/${personaje.id}`} 
               url={personaje.imgBase64} 
             />
           )

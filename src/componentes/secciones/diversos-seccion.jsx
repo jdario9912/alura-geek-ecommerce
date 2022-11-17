@@ -24,7 +24,7 @@ const DiversosSeccion = () => {
               nombre={diverso.nombre} 
               precio={diverso.precio} 
               key={diverso.id} 
-              vinculoVerMas={`/producto-descripcion/${diverso.seccion}/${diverso.id}/${diverso.seccion}`} 
+              vinculoVerMas={`/producto-descripcion/${diverso.seccion}/${diverso.id}`} 
               url={diverso.imgBase64} 
             />
           )

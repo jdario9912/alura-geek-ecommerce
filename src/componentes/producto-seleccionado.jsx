@@ -1,9 +1,11 @@
 import React from 'react';
 import Vinculo from './vinculo';
 import { VinculoModel } from '../modelos/vinculo-model';
+import { useParams } from 'react-router-dom';
 
-const ProductoSeleccionado = ({ src, nombre, precio, descripcion, seccion, id}) => {
+const ProductoSeleccionado = ({ src, nombre, precio, descripcion}) => {
   const estilosVinculo = 'border border-blue-600 rounded text-blue-600 py-1 px-4 text-center text-xs';
+  const { seccion, id } = useParams();
   return (
     <div className='flex flex-col gap-2'>
       <img src={ src } alt="imagen producto seleccionado" className='h-64 w-auto mx-auto'/>
