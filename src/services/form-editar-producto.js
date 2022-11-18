@@ -30,7 +30,9 @@ const registrarProductoActualizado = (id, imgBase64, nombre, precio, seccion, de
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({imgBase64, nombre, precio, seccion, descripcion, fecha, editado })
-    });
+    })
+    .then(window.location.href = '/producto-descripcion/' + seccion + '/' + id)
+    .catch(e => alert(e))
 }
 
 export const formEditarProducto = {
