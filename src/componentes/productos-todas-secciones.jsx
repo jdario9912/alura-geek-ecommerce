@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import ProductoEditable from './producto-editable';
+import { urlApi } from '../config-api/config-api'
 
 const ProductosTodasSecciones = () => {
   const [starWars, setStarWars] = useState([]);
@@ -7,21 +8,21 @@ const ProductosTodasSecciones = () => {
   const [diversos, setDiversos] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/starWars')
+    fetch(urlApi + 'starWars')
       .then(res => res.json())
       .then(prodSW => setStarWars(prodSW))
       .catch(e => console.log(e))
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/consolas`)
+    fetch(urlApi + 'consolas')
       .then(res => res.json())
       .then(prodC => setConsolas(prodC))
       .catch(e => console.log(e))
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/diversos`)
+    fetch(urlApi + 'diversos')
       .then(res => res.json())
       .then(prodD => setDiversos(prodD))
       .catch(e => console.log(e))
