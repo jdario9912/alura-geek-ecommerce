@@ -1,5 +1,6 @@
 import moment from 'moment';
 import { v4 as uuidv4 } from 'uuid';
+import { urlApi } from '../config-api/config-api';
 
 const capturarImagen = (files) => {
   const tagImg = document.querySelector('[data-img]');
@@ -7,10 +8,8 @@ const capturarImagen = (files) => {
   tagImg.src = files.base64;
 }
 
-
-
 const registrarProducto = (imgBase64, nombre, precio, descripcion, seccion, fecha) => {
-  return fetch(`http://localhost:3000/${seccion}`, {
+  return fetch(urlApi + seccion, {
       method: 'POST',
       headers: {
           "Content-Type": "application/json"
