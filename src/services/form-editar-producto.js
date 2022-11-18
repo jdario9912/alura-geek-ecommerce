@@ -1,4 +1,5 @@
 import moment from "moment";
+import { urlApi } from "../config-api/config-api";
 
 const capturarImagen = (files) => {
   const tagImg = document.querySelector('[data-img]');
@@ -22,7 +23,8 @@ const actualizarProducto = (e) => {
 
 const registrarProductoActualizado = (id, imgBase64, nombre, precio, seccion, descripcion, fecha) => {
   const editado = moment().format('L');
-  return fetch(`http://localhost:3000/${ seccion }/${ id }`, {
+  
+  return fetch(urlApi + seccion + '/' + id , {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

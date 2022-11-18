@@ -1,32 +1,28 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { InputProdModel } from '../../modelos/input-editar-prod-model';
 import { ProductoContext } from '../../paginas/editar-producto';
 import { formEditarProducto } from '../../services/form-editar-producto';
 import Button from './button';
 import FileReader from './file-reader';
-import Input from './input';
+import InputFecha from './input-fecha';
+import InputNombre from './input-nombre';
+import InputPrecio from './input-precio';
 import Select from './select';
 import TextArea from './text-area';
 
 const Formulario = () => {
 
-  const { id, nombre, precio, fecha, imgBase64, descripcion } = useContext(ProductoContext);
-  const [nombreF, setNombreF] = useState('');
-
-  useEffect(() => {
-    setNombreF(nombre);
-    console.log(nombreF);
-  }, []);
+  const { id, nombre, imgBase64 } = useContext(ProductoContext);
   
   return (
     <form className='flex flex-col gap-4'>
       <input type="num" disabled id={ id } value={ id } hidden data-id />
-      <FileReader imgBase64={ imgBase64 } />
-      <Input props= { new InputProdModel('nombre', 'text', false, nombre)} />
-      <Input props= { new InputProdModel('precio', 'text', false, precio)} />
-      <TextArea nombre='descripcion' value={ descripcion }/>
+      <FileReader imgBase64={ imgBase64 } nombre={ nombre } />
+      <InputNombre props= { new InputProdModel('nombre', 'text', false)} />
+      <InputPrecio props= { new InputProdModel('precio', 'text', false)} />
+      <TextArea nombre='descripcion' />
       <Select nombre='seccion' />
-      <Input props= { new InputProdModel('fecha', 'text', true, fecha)} />
+      <InputFecha props= { new InputProdModel('fecha', 'text', true)} />
       <Button accion={ formEditarProducto.actualizarProducto }/>
     </form>
   );

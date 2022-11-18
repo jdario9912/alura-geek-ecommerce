@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Formulario from '../componentes/form-editar-producto/formulario';
 import TituloPagina from '../componentes/titulo-pagina';
+import { urlApi } from '../config-api/config-api';
 
 export const ProductoContext = createContext();
 
@@ -10,7 +11,7 @@ const EditarProducto = () => {
   const { seccion, id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/${seccion}/${id}`)
+    fetch(urlApi + seccion + '/' + id)
       .then(res => res.json())
       .then(resProducto => setProducto(resProducto))
       .catch(e => alert(e))

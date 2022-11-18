@@ -4,8 +4,6 @@ import Vinculo from '../vinculo';
 import moment from 'moment/';
 import 'moment/locale/es';
 
-console.log(moment.locale());
-
 const BannerComponent = () => {
   const mes = moment().format('MMMM');
   const estilos = 'capitalize bg-blue-600 p-2 text-sm';
