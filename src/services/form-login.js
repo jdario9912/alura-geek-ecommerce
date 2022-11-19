@@ -18,7 +18,7 @@ const catchInfoUsuario = (e) => {
 }
 
 const validaCamposLogin = (valueCampoUsuario, valueCampoPass) => {
-  if(valueCampoUsuario != ''&& valueCampoPass != '')
+  if(valueCampoUsuario !== ''&& valueCampoPass !== '')
     return true;
   else
     return false;
