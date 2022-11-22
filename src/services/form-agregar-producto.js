@@ -9,19 +9,19 @@ const capturarImagen = (files) => {
 }
 
 const registrarProducto = (imgBase64, nombre, precio, descripcion, seccion, fecha) => {
-  return fetch(urlApi + seccion, {
+  return fetch('http://localhost:3000' + seccion, {
       method: 'POST',
       headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json; charset=UTF-8"
       },
       body: JSON.stringify({
-        id:uuidv4(), 
-        imgBase64, 
-        nombre, 
-        precio, 
-        descripcion,
-        seccion,
-        fecha
+        id: {id:uuidv4()}, 
+        imgBase64: imgBase64, 
+        nombre: nombre, 
+        preico: precio, 
+        descripcion: descripcion,
+        seccion: seccion,
+        fecha: fecha
       })
   })
   .then(window.location.href = '/confirma-producto-agregado');

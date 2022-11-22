@@ -1,10 +1,10 @@
 import './App.css';
 import Header from './componentes/header/header-component';
 import Overlay from './componentes/overlay';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import FooterComponent from './componentes/footer/footer-component';
-import Home from './paginas/home';
 import { Routes, Route } from "react-router-dom";
+import Home from './paginas/home';
 import Login from './paginas/login';
 import ProductosTodos from './paginas/productos-todos';
 import Error404 from './paginas/error404';
@@ -15,9 +15,11 @@ import ProductoDescripcion from './paginas/producto-descripcion';
 import ConfirmaProductoAgregado from './paginas/confirma-producto-agregado';
 import ProductosPorSeccion from './paginas/productos-por-seccion';
 
+export const NavBarContext = createContext();
+
 function App() {
   const [showFormSearch, setShowFormSearch] = useState(false);
-
+  
   const controlShowFormSearch = () => {
     setShowFormSearch(!showFormSearch);
   }
@@ -30,9 +32,18 @@ function App() {
     window.addEventListener('resize', ocultaFormSearch);
   });
 
+  const accionesForm = {
+    showFormSearch,
+    controlShowFormSearch,
+    ocultaFormSearch
+  }
+
   return (
     <div className="App text-slate-700">
-      <Header accionLupa={ controlShowFormSearch } showFormSearch={ showFormSearch }/>
+      <NavBarContext.Provider value={ accionesForm }>
+        <Header />
+        <Overlay />
+      </NavBarContext.Provider>
       <div className='bg-neutral-100'>
         <Routes>
           <Route path="*" element={ <Error404 /> } />
@@ -49,7 +60,6 @@ function App() {
           <Route path="/producto-por-seccion/:seccion" element={ <ProductosPorSeccion />} />
         </Routes>
       </div>
-      <Overlay visible={ showFormSearch } accionOverlay={ controlShowFormSearch } />
       <FooterComponent />
     </div>
   );

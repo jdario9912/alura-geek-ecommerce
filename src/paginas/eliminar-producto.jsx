@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { urlApi } from '../config-api/config-api';
 
 const EliminarProducto = () => {
   const {id, seccion} = useParams();
   const [articulo, setArticulo] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:3000/${seccion}/${id}`)
+    fetch(`${urlApi}${seccion}/${id}`)
       .then(res => res.json())
       .then(res => setArticulo(res))
       .catch(e => console.log(e))
@@ -14,11 +15,11 @@ const EliminarProducto = () => {
   // ME FALTA IR A LA PAGINA DE TODOS LOS PRODUCTOS UNA VEZ QUE SE ELIMINA UN PRODUCTO
 
   const confirmaEliminarProducto = () => {
-    return fetch(`http://localhost:3000/${seccion}/${id}`, {
+    return fetch(`${urlApi}${seccion}/${id}`, {
         method: 'DELETE',
     })
     .then(window.location.href = 'http://localhost:3001/productos-todos')
-    .catch(alert('Ocurrio un error inesperado. No se pudo eliminar'));
+    // .catch(alert('Ocurrio un error inesperado. No se pudo eliminar'));
   }
 
   return (
