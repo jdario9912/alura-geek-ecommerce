@@ -35,8 +35,8 @@ const EliminarProducto = () => {
       <div className='flex flex-col gap-4'>
         <p>¿Está seguro que quiere eliminar este producto?</p>
         <div className='flex justify-center gap-8'>
-          <span className='text-green-600' onClick={confirmaEliminarProducto}>Si</span>
-          <span className='text-red-600'>No</span>
+          <span className='text-green-600 hover:cursor-pointer' onClick={confirmaEliminarProducto}>Si</span>
+          <span className='text-red-600 hover:cursor-pointer'>No</span>
         </div>
       </div>
     </div>
