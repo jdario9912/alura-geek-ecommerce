@@ -8,7 +8,7 @@ import LupaComponent from './lupa-component';
 
 const Header = () => {
 
-  const sizeLogoNavBar = new LogoSize('','');
+  const sizeLogoNavBar = new LogoSize('','text-lg');
   const vinculoHeaderLogin = new VinculoModel('Login', '/login', 'px-8 py-2 border border-blue-600 text-blue-600');
 
   return (

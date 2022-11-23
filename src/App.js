@@ -14,6 +14,7 @@ import EliminarProducto from './paginas/eliminar-producto';
 import ProductoDescripcion from './paginas/producto-descripcion';
 import ConfirmaProductoAgregado from './paginas/confirma-producto-agregado';
 import ProductosPorSeccion from './paginas/productos-por-seccion';
+import EnDesarrollo from './paginas/en-desarrollo';
 
 export const NavBarContext = createContext();
 
@@ -39,7 +40,7 @@ function App() {
   }
 
   return (
-    <div className="App text-slate-700">
+    <div className="App text-slate-700 lg:w-4/5 mx-auto">
       <NavBarContext.Provider value={ accionesForm }>
         <Header />
         <Overlay />
@@ -48,6 +49,7 @@ function App() {
         <Routes>
           <Route path="*" element={ <Error404 /> } />
           <Route path="/" element={ <Home /> } />
+          <Route path="/en-desarrollo" element={ <EnDesarrollo /> } />
           <Route path="/login" element={ <Login /> } />
           <Route path="/productos-todos" element={ <ProductosTodos /> } />
           <Route path="/agregar-producto" element={ <AgregarProducto /> } />

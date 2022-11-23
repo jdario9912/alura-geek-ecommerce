@@ -21,7 +21,7 @@ const StarWarsSeccion = () => {
   }, []);
 
   return (
-    <section className='p-4'>
+    <section className='p-4 lg:px-24'>
       <EncabezadoSeccion titulo='StarWars' />
       <div className='flex flex-wrap gap-2'>
         {

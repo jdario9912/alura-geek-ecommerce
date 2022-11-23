@@ -6,7 +6,7 @@ import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 const ProductoEditable = ({ imgBase64, nombre, precio, seccion, id }) => {
   const vinculoEstilos = 'text-blue-600';
   return (
-    <span className='w-[48%]'>
+    <span className='w-[48%] lg:w-[23%]'>
       <div className='relative'>
         <img src={ imgBase64 } alt='imagen producto' className='w-full h-auto' />
         <div className='flex text-slate-200 absolute top-3 right-3 gap-2 text-3xl'>

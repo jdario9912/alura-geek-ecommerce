@@ -20,7 +20,7 @@ const ConsolasSeccion = () => {
   }, []);
 
   return (
-    <section className='p-4' id='consolas'>
+    <section className='p-4 lg:px-24' id='consolas'>
       <EncabezadoSeccion titulo='Consolas' />
       <div className='flex flex-wrap gap-2'>
         {

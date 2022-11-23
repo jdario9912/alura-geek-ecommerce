@@ -4,12 +4,12 @@ import { VinculoModel } from '../modelos/vinculo-model';
 import { useParams } from 'react-router-dom';
 
 const ProductoSeleccionado = ({ src, nombre, precio, descripcion}) => {
-  const estilosVinculo = 'border border-blue-600 rounded text-blue-600 py-1 px-4 text-center text-xs';
+  const estilosVinculo = 'border border-blue-600 rounded text-blue-600 py-1 px-4 text-center text-xs lg:w-32';
   const { seccion, id } = useParams();
   return (
-    <div className='flex flex-col gap-2'>
+    <div className='flex flex-col gap-2 lg:flex-row lg:pt-4'>
       <img src={ src } alt="imagen producto seleccionado" className='h-64 w-auto mx-auto'/>
-      <div className='px-4 flex justify-end gap-2'>
+      <div className='px-4 flex justify-end gap-2 lg: lg:order-last lg:flex-col lg:justify-start lg:px-0'>
         <Vinculo props={ new VinculoModel('Ver todos', '/productos-todos', estilosVinculo)} />
         <Vinculo props={ new VinculoModel('Editar', `/editar-producto/${seccion}/${id}`, estilosVinculo)} />
       </div>

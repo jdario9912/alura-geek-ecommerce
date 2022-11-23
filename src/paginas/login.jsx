@@ -26,16 +26,7 @@ const Login = () => {
           onClick={ formLogin.catchInfoUsuario }
         >
           Ingresar
-        </button>
-
-        <button 
-          type="submit"
-          className='bg-red-600 text-slate-200 p-2'
-          onClick={ formLogin.auxOp }
-        >
-          Aux
-        </button>  
-        
+        </button>        
       </form> 
     </div>
   );

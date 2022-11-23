@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactFileReader from 'react-file-reader';
 import { formProductoNuevo } from '../../services/form-agregar-producto';
 import { AiOutlineUpload } from "react-icons/ai";
 
 
 const FileReader = () => {
+  const [estiloImg, setEstiloImg] = useState('w-full max-w-xs h-72 max-h-80 border border-dashed border-slate-400 bg-slate-200');
+
+  const manejadorImg = (e) => {
+    setEstiloImg('w-full max-w-xs h-72 max-h-80 border border-dashed border-slate-400 bg-slate-200 relative')
+    console.log(e.target);
+  }
   return (
     <div>
       <ReactFileReader fileTypes={[".png", "jpg", "jpeg"]} handleFiles={formProductoNuevo.capturarImagen} base64={true} multipleFiles={false}>
@@ -13,8 +19,8 @@ const FileReader = () => {
         <AiOutlineUpload />
         <p className='text-xl'>Elegir foto</p>
       </div>
-      <div className='w-full max-w-xs h-72 max-h-80 border border-dashed border-slate-400 bg-slate-200'>
-        <img src="" alt="" className='w-full h-full' data-img />
+      <div className={ estiloImg }>
+        <img src="" alt="" className='w-full h-full' data-img onLoad={ manejadorImg } />
       </div>
     </ReactFileReader>
     </div>

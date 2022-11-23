@@ -8,7 +8,7 @@ import TextArea from './text-area';
 
 const Formulario = () => {
   return (
-    <form action="" className='flex flex-col gap-4'>
+    <form action="" className='flex flex-col gap-4 lg:w-1/3 mx-auto'>
       <FileReader />
       <Label props={ new LabelModel('nombre', 'Nombre:', 'text', 'nombre', 'nombre')} />
       <Label props={ new LabelModel('precio', 'Precio:', 'num', 'precio', 'precio')} />

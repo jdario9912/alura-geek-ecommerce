@@ -14,7 +14,7 @@ const ProductoDescripcion = () => {
       .catch(e => alert(e))
   }, []);
   return (
-    <div>
+    <div className='lg:px-24'>
       <ProductoSeleccionado 
         src={prodSeleccionado.imgBase64} 
         nombre={prodSeleccionado.nombre} 
