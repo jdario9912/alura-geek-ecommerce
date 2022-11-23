@@ -5,7 +5,7 @@ const Select = () => {
   return (
     <label htmlFor="seccion" className={ estilosLabel }>
       Sección:
-      <select id='seccion' data-seccion>
+      <select id='seccion' data-seccion required>
         <option value="starWars">Star Wars</option>
         <option value="consolas">Consolas</option>
         <option value="diversos">Diversos</option>

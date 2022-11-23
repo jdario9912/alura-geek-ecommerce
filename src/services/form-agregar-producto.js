@@ -60,8 +60,13 @@ const eliminarProducto = (id) =>{
   });
 };
 
+const onSubmit = (e) => {
+  e.preventDefault();
+}
+
 export const formProductoNuevo = {
   catchInfoProductoNuevo,
   capturarImagen,
   eliminarProducto,
+  onSubmit
 };

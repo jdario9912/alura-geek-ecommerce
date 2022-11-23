@@ -12,13 +12,11 @@ const EliminarProducto = () => {
       .catch(e => console.log(e))
   }, []);
 
-  // ME FALTA IR A LA PAGINA DE TODOS LOS PRODUCTOS UNA VEZ QUE SE ELIMINA UN PRODUCTO
-
   const confirmaEliminarProducto = () => {
     return fetch(`${urlApi}${seccion}/${id}`, {
         method: 'DELETE',
     })
-    .then(window.location.href = urlApi + '/productos-todos')
+    .then(window.location.href ='https://alura-geek-ecommerce-six.vercel.app/productos-todos')
     // .catch(alert('Ocurrio un error inesperado. No se pudo eliminar'));
   }
 

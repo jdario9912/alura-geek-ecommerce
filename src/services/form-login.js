@@ -1,20 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const catchInfoUsuario = (e) => {
-  e.preventDefault();
-  const inputUsuario = document.querySelector('[data-usuario]');
-  const inputPassword = document.querySelector('[data-password]');
+const onClick = (e) => {
   
-  const valueCampoUsuario = inputUsuario.value;
-  const valueCampoPass = inputPassword.value;
+}
 
-  validaCamposLogin(valueCampoUsuario, valueCampoPass) ?
-    alert('Aca va el codigo que loguea el usuario') :
-    alert('Debes completar el formulario')
-  ;
-
-  inputUsuario.value = '';
-  inputPassword.value = '';
+const onSubmit = (e) => {
+  // e.preventDefault();
+  
 }
 
 const validaCamposLogin = (valueCampoUsuario, valueCampoPass) => {
@@ -58,8 +50,9 @@ const auxOp = (e) => {
 }
 
 export const formLogin = {
-  catchInfoUsuario,
+  onClick,
   eliminarUsuario,
   crearUsuario,
   auxOp,
+  onSubmit
 }

@@ -29,6 +29,7 @@ const TextArea = ({ nombre }) => {
         data={ nombre }
         className={ estilosTextArea }
         onChange={ actualizar }
+        required
       />
     </label>
   );

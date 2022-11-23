@@ -8,22 +8,32 @@ const Login = () => {
   return (
     <div className='w-full h-[calc(100vh-80px)] flex flex-col justify-center items-center'>
       <TituloPagina texto='Iniciar sesión' />
-      <form action="" className='flex flex-col gap-4'>
+      <form action="" className='flex flex-col gap-4' onSubmit={ formLogin.onSubmit }>
 
         <label htmlFor="usuario" className={ estilosLabel }>
           Usuario:
-          <input type="text" id='usuario' data-usuario />
+          <input 
+            type="text" 
+            id='usuario' 
+            data-usuario 
+            required
+          />
         </label>
 
         <label htmlFor="password" className={ estilosLabel }>
           Contraseña:
-          <input type="password" id='password' data-password />
+          <input 
+            type="password" 
+            id='password' 
+            data-password 
+            required
+          />
         </label>
 
         <button 
           type="submit"
           className='bg-blue-600 text-slate-200 p-2'
-          onClick={ formLogin.catchInfoUsuario }
+          onClick={ formLogin.onClick }
         >
           Ingresar
         </button>        

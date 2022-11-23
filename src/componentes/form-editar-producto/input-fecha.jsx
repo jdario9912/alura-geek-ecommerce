@@ -29,6 +29,7 @@ const InputFecha = ({ props }) => {
         data={ props.nombre } 
         value={ valueInput }
         onChange={ actualizar }
+        required
         />
     </label>
   );

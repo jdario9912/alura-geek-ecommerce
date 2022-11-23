@@ -20,7 +20,7 @@ const FileReader = () => {
         <p className='text-xl'>Elegir foto</p>
       </div>
       <div className={ estiloImg }>
-        <img src="" alt="" className='w-full h-full' data-img onLoad={ manejadorImg } />
+        <img src="" alt="" className='w-full h-full' required data-img onLoad={ manejadorImg } />
       </div>
     </ReactFileReader>
     </div>

@@ -5,7 +5,7 @@ const TextArea = () => {
   return (
     <label htmlFor="descripcion" className={ estilosLabel }>
       Descripción:
-      <textarea id='descripcion' data-descripcion />
+      <textarea id='descripcion' data-descripcion required />
     </label>
   );
 }

@@ -7,7 +7,7 @@ const Button = () => {
     <button 
       type="submit"
       className='bg-blue-600 text-slate-200 p-2'
-      onClick={formProductoNuevo.catchInfoProductoNuevo}
+      onClick={ formProductoNuevo.catchInfoProductoNuevo }
     >
       Agregar producto
     </button>

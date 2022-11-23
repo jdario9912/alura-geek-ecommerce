@@ -24,7 +24,7 @@ const Select = ({ nombre }) => {
   return (
     <label htmlFor={ nombre } className={ estilosLabel }>
       { nombre }:
-      <select id={ nombre } data={ nombre } value={ valueSelect } onChange={ actualizar }>
+      <select id={ nombre } data={ nombre } value={ valueSelect } onChange={ actualizar } required >
         <OptionSelect value='starWars' texto='Star Wars' />
         <OptionSelect value='consolas' texto='Consolas' />
         <OptionSelect value='diversos' texto='Diversos' />
