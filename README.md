@@ -21,4 +21,4 @@ Implementa TailwindCSS para los estilos.
 
 ## Imágenes
 ### Home
-![imagen del Home](https://drive.google.com/file/d/1Hbac023VPyPRpJVr53yJ8zeb2dTqge2R/view?usp=sharing)
+![https://drive.google.com/file/d/1Hbac023VPyPRpJVr53yJ8zeb2dTqge2R/view?usp=sharing](https://drive.google.com/file/d/1Hbac023VPyPRpJVr53yJ8zeb2dTqge2R/view?usp=sharing)
