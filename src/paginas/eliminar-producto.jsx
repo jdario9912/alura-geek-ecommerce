@@ -18,7 +18,7 @@ const EliminarProducto = () => {
     return fetch(`${urlApi}${seccion}/${id}`, {
         method: 'DELETE',
     })
-    .then(window.location.href = 'http://localhost:3001/productos-todos')
+    .then(window.location.href = urlApi + '/productos-todos')
     // .catch(alert('Ocurrio un error inesperado. No se pudo eliminar'));
   }
 
